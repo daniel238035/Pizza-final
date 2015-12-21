@@ -1,0 +1,158 @@
+
+
+
+body{
+    background: url(../Imagenes/fondo_login_3.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    position: relative;
+    width: 100%;
+    height: 1922px;
+    overflow: hidden;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    margin: 0px;
+
+}
+
+.izquierda{
+    width: 65%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    float: left;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+}
+
+.izquierda1{
+    position: relative;
+    top: 600px;
+    left: 70px;
+    float: left;
+    background: #fff;
+    opacity: 0.85;
+    padding: 5px 10px 5px 10px;
+    margin: 0;
+}
+
+.izquierda h1{
+    margin: 0;
+    font-size: 3em;
+}
+
+.izquierda2{
+    position: relative;
+    top: 610px;
+    left: 70px;
+    background: #fff;
+    float: left;
+    opacity: 0.85;
+    padding: 5px 10px 5px 10px;
+    margin: 0;
+}
+
+.derecha{
+    float: left;
+    overflow: hidden;
+    background: #fff;
+    opacity: 0.95;
+    width: 28%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    /*border: 1px solid green;*/
+    position: relative;
+    margin: 60px 35px;
+}
+
+.logo figure{
+  margin: 0;
+}
+
+.imagen_logo img{
+    margin-left:12.5%;
+    width: 75%;
+}
+
+.login{
+    font-weight: bold;
+    height: 100%;
+    padding: 20px 40px 0 40px;
+}
+
+.login h1{
+    color: #429b66;
+    font-size: 2.2em;
+    margin: 0 0 20px 0;
+
+}
+
+.login-usuario{
+    /*border: 1px solid blue;*/
+}
+
+.login-usuario input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: #e9eaed;
+    font-size: 1.5em;
+}
+
+.login-usuario input:focus{
+    border: 2px solid #429b66;
+}
+
+.login-usuario input[type="text"], input[type="password"] {
+    color: black;
+    font-family: 'Roboto Condensed', sans-serif;
+    border-radius: 6px;
+}
+
+.login-usuario input[type="submit"]{
+    border-radius: 6px;
+    background: #429b66;
+    color: white;
+    margin-top: 20px;
+    font-size: 2em;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    border: none;
+  }
+
+.login-usuario input[type="submit"]:hover{
+    background: #51c480;
+    cursor:pointer;
+}
+
+.opciones{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: #e9eaed;
+    font-size: 1.5em;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #da0000;
+    text-align: center;;
+}
+
+.derecha h4{
+  text-align: center;
+  margin-top: 170px;
+}

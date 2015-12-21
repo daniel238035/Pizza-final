@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="Mapeadores.ProductoMapeador">    
+    <resultMap id="resultProducto" type="Entidades.Producto">
+        <id property="id" column="tb_producto_id"></id>
+        <result property="cod" column="tb_producto_cod"></result>
+        <result property="nombre" column="tb_producto_nom"></result>
+        <result property="desc" column="tb_producto_desc"></result>
+        <result property="imagen" column="tb_producto_img"></result>
+        <result property="preUni" column="tb_producto_preuni"></result>
+    </resultMap>
+
+    <select id="SeleccionarGeneral" parameterType="String" resultMap="resultProducto">
+        select
+        tb_producto_id,
+        tb_producto_cod,
+        tb_producto_nom,
+        tb_producto_desc,
+        tb_producto_img,
+        tb_producto_preuni
+        from tb_producto
+        where tb_producto_nom like #{Nombre}
+        order by tb_producto_nom asc
+    </select>    
+
+    <select id="SeleccionarPorId" parameterType="Integer" resultMap="resultProducto">
+        select
+        tb_producto_id,
+        tb_producto_cod,
+        tb_producto_nom,
+        tb_producto_desc,
+        tb_producto_preuni
+        from tb_producto
+        where tb_producto_id = #{Id}
+    </select>    
+    
+</mapper>

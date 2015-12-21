@@ -1,0 +1,170 @@
+body{
+  margin-top: 50px;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
+
+.error{
+    color:#c9302c;
+    font-weight: bold;
+}
+
+.contenedor-total{
+  margin: 0;
+  padding: 0;
+}
+
+header{
+
+}
+
+.fila{
+ margin: 0;
+}
+
+.navegacion{
+
+
+}
+
+.imagen{
+  width: 100%;
+  padding: 0px;
+}
+
+.titulo{
+  background: #429b66;
+  color: white;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+}
+
+.titulo h3{
+  margin: 10px 0;
+}
+
+
+.seccion1{
+  border-top: 20px solid #429b66;
+  padding-bottom: 40px;
+}
+
+.datos h3 {
+  font-weight: bold;
+  border-bottom: 5px solid #429b66;
+}
+
+.datos form{
+
+}
+
+.form-1 label{
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.form-1 p{
+  font-size: 1.3em;
+
+}
+
+.form-1 .cuadro{
+  background: #eee;
+}
+
+.panel-titulo{
+  background: #F2DEDE!important;
+}
+
+.panel-cuerpo{
+
+
+}
+
+.panel-cuerpo div{
+
+  padding: 0px;
+}
+
+.panel-cuerpo label{
+  padding: 0px;
+}
+
+.panel-cuerpo button{
+  background: #429b66;
+  color: white !important;
+
+}
+
+.panel-cuerpo h5{
+
+  margin-bottom: 20px;
+}
+
+footer{
+  background: #353535;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 0.9em;
+}
+
+footer h4{
+  display: inline-block;
+  color: white;
+
+}
+footer span{
+  color: white;
+  display: inline-block;
+  margin: 0px 5px;
+}
+
+.icon-facebook2:hover{
+  color: #3b5998;
+}
+
+.icon-twitter2:hover {
+  color:  #1dcaff;
+}
+
+.icon-youtube:hover {
+  color: #bb0000
+}
+
+.icon-github3:hover {
+  color: #6E00B2;
+}
+
+@media(min-width:450px){
+ img {
+   width: 100%;
+
+ }
+
+ .navegador-izq li:last-child {
+   margin-right: 20px;
+ }
+
+ .titulo h3{
+   font-size: 3em;
+ }
+
+ .form-1 h3{
+   font-size: 2.3em;
+ }
+
+ .btn-confirmar{
+     border-radius: 6px;
+     background: #429b66;
+     color: white;
+     padding-bottom: 40px;
+     font-size: 2em;
+     font-weight: bold;
+     border: none;
+     padding: 0;
+   }
+}

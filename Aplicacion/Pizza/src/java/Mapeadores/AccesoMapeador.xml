@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="Mapeadores.AccesoMapeador">   
+    <resultMap id="resultAcceso" type="Entidades.Acceso">
+        <id property="id" column="tb_acceso_id"></id>
+        <result property="fech_in" column="tb_acceso_fecini"></result>
+        <result property="fech_out" column="tb_acceso_fecter"></result>
+    </resultMap> 
+    <select id="seleccionarRol" parameterType="String" resultType="String">
+        select
+        tb_acceso_rol   
+        from tb_acceso
+        inner join tb_usuario on (tb_acceso.tb_usuario_id=tb_usuario.tb_usuario_id)
+        where tb_usuario_usenam = #{user}
+    </select>
+    
+    <insert id="insertarAcceso" parameterType="Entidades.Acceso">
+        insert into 
+        tb_acceso(tb_acceso_fecini,tb_acceso_fecter,tb_acceso_rol,tb_usuario_id) 
+        values(#{fech_in},#{fech_out},#{rol},#{oUsuario.id})        
+    </insert>
+    
+    <select id="obtenerAcceso" parameterType="Integer" resultMap="resultAcceso">
+        select 
+        tb_acceso_id, 
+        tb_acceso_fecini, 
+        tb_acceso_fecter 
+        from tb_acceso 
+        where tb_usuario_id = #{id}
+    </select>
+</mapper>

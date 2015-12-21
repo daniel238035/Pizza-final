@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="Mapeadores.UsuarioMapeador">    
+    <resultMap id="resultUsuario" type="Entidades.Usuario">
+        <id property="id" column="tb_usuario_id"></id>
+        <result property="nom" column="tb_usuario_nom"></result>
+        <result property="ap_pat" column="tb_usuario_apepat"></result>
+        <result property="ap_mat" column="tb_usuario_apemat"></result>
+        <result property="user" column="tb_usuario_usenam"></result>
+        <result property="password" column="tb_usuario_pas"></result>
+    </resultMap>
+    
+    <resultMap id="resultMax" type="Integer">
+        <result property="maxid" column="maximo"></result>
+    </resultMap>
+    
+  
+    
+    <select id="seleccionarMaxID" resultMap="resultMax">
+            select MAX(tb_usuario_id) as maximo from tb_usuario
+    </select>
+    
+    <update id="ModificarContraseña" parameterType="Entidades.Usuario">
+        update tb_usuario 
+        set tb_usuario_pas = #{password}
+        where tb_usuario_corele = #{corele}        
+    </update>    
+ 
+    <select id="seleccionarUsuarioPorCorreo" parameterType="String" resultMap="resultUsuario">
+        select
+        tb_usuario_id,
+        tb_usuario_nom,
+        tb_usuario_apepat,
+        tb_usuario_apemat,
+        tb_usuario_usenam,
+        tb_usuario_pas
+        from tb_usuario        
+        where tb_usuario_corele = #{correo} 
+    </select>
+    
+     <select id="seleccionarPorUser" parameterType="String" resultMap="resultUsuario">
+        select
+        tb_usuario_id,
+        tb_usuario_nom,
+        tb_usuario_apepat,
+        tb_usuario_apemat,
+        tb_usuario_usenam,
+        tb_usuario_pas
+        from tb_usuario        
+        where tb_usuario_usenam = #{user} 
+    </select>
+    
+    
+    <update id="cambiarContraseña" parameterType="Entidades.Usuario">        
+        update tb_usuario
+        set tb_usuario_pas= #{password}
+        where tb_usuario_usenam = #{user}
+    </update>
+     
+    
+    
+    
+
+    <select id="SeleccionarUsuario" parameterType="Entidades.Usuario" resultMap="resultUsuario">
+        select
+        tb_usuario.tb_usuario_id,
+        tb_usuario_nom,
+        tb_usuario_apepat,
+        tb_usuario_apemat,
+        tb_usuario_usenam,
+        tb_usuario_pas,
+        tb_acceso_rol
+        from tb_usuario
+        inner join tb_acceso on (tb_acceso.tb_usuario_id=tb_usuario.tb_usuario_id)
+        where tb_usuario_usenam = #{user} AND tb_usuario_pas = #{password} AND tb_acceso_rol=#{oAcceso.rol}
+    </select>
+    
+    <insert id="Registrar" parameterType="Entidades.Usuario">
+        insert into tb_usuario(
+            tb_usuario_cod,
+            tb_usuario_nom,
+            tb_usuario_apepat,
+            tb_usuario_apemat,
+            tb_usuario_corele,
+            tb_usuario_usenam,
+            tb_usuario_pas)
+        values(
+            #{cod},
+            #{nom},
+            #{ap_pat},
+            #{ap_mat},
+            #{correo},
+            #{user},
+            #{password})
+    </insert>    
+
+</mapper>

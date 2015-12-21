@@ -1,0 +1,452 @@
+body{
+    position: relative;
+    background: #e9eaed;
+    width: 100%;
+    /*height: 1922px;*/
+
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    margin: 0px;
+}
+
+.contenedor{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: white;
+    padding: 0;
+    /*width:90%
+    margin-left:5%;*/
+}
+
+header{
+
+    padding: 10px 30px;
+}
+
+.logo{
+
+    position: relative;
+}
+
+.logo figure{
+  margin: 0;
+}
+
+.imagen_logo img{
+    margin-left:10px;
+    width: 240px;
+
+}
+
+.navegacion{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.navegacion a{
+    list-style: none;
+    display: inline-block;
+    width: 25%;
+    margin: 0px;
+    padding: 0px;
+    background: #b22828;
+    text-decoration: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-right: 0px;
+    float: left;
+    padding-bottom: 15px;
+}
+
+.navegacion a:first-child{
+  background: #429b66;
+}
+
+.navegacion a:hover{
+    background: #353535;
+    cursor:pointer;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #429b66;
+
+}
+.navegacion h2{
+    color: white;
+    text-align: center;
+    width: 50%;
+    font-size: 2em;
+    margin-left: 25%;
+    margin-top: 10px ;
+    margin-bottom: 0;
+}
+
+
+.imagen {
+    overflow:visible;
+}
+
+.imagen figure{
+    margin: 0;
+}
+
+.imagen_principal img{
+    width:100%;
+    float: left;
+}
+
+.datos{
+  float: left;
+  width: 100%;
+  border-top: 20px solid #429b66;
+  padding: 20px 60px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  background: #353535;
+}
+
+.datos h1{
+
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.form_cliente{
+    width: 100%;
+    margin: 0;
+    margin-left: 0%;
+    font-size: 2em;
+    font-weight: bold;
+
+}
+
+.form_cliente input{
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: #e9eaed;
+    font-size: 1em;
+    font-family: 'Roboto Condensed', sans-serif;
+    border-radius: 6px;
+    display: block;
+}
+
+#pretele{
+    width: 40%;
+}
+.form_cliente label{
+    color: #429b66;
+
+}
+
+.form_cliente input:focus{
+  border: 2px solid #429b66;
+}
+
+.form_cliente div{
+    width: 48%;
+    display: inline-block;
+}
+
+.form_cliente div:first-child{
+    display: block;
+    width: 90%;
+}
+
+.ciudades{
+    width: 90%;
+    padding: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: #e9eaed;
+    font-size: 1em;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+div h2 {
+    color: #429b66;
+    margin: 0;
+    font-size: 1em;
+}
+
+.productos{
+  float: left;
+  width: 100%;
+  border-top: 20px solid #b22828;
+  padding: 20px 60px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  background: white;
+}
+
+.productos h1{
+    color: #353535;
+    font-size: 3em;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.productos .cada_prod{
+    width: 90%;
+    margin-left: 5%;
+}
+
+.fila1{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.fila1:first-child{
+    margin-top: 40px;
+}
+
+.fila1:last-child{
+    margin-bottom: 50px;
+}
+
+.fila1 .bloque{
+    width: 30%;
+    float: left;
+    margin-left: 5%;
+}
+
+.fila1 section:first-child{
+    margin-left: 0;
+}
+
+
+
+.fila1 figure{
+    margin: 0;
+}
+
+.fila1 img{
+    width: 100%;
+    float: left;
+}
+
+.bloque{
+
+}
+
+.nombre_pizza{
+    background: #da0000;
+    width: 100%;
+    padding: 4px 0px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    float: left;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.nombre_pizza h2{
+    margin: 0px;
+}
+
+.desc_pizza{
+    font-size: 1.4em;
+    float: left;
+    padding: 15px;
+    background: #e9eaed;
+}
+
+p{
+    margin: 0;
+}
+
+.precio_pizza{
+    width: 100%;
+    float: left;
+    padding: 15px;
+    background: #e9eaed;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.precio_pizza h2{
+    margin: 0;
+    margin-left: 10px;
+    font-size: 2em;
+    float: left;
+
+}
+
+.precio_pizza h2:last-child{
+    float: right;
+    margin-right: 10px;
+}
+
+.cantidad{
+    background: #429b66;
+    width: 40%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.cantidad label{
+    font-size: 1.7em;
+    float: left;
+    color: white;
+    font-weight: bold;
+    margin-left: 5%;
+}
+
+#cantidad{
+    width: 40%;
+    padding: 5px;
+    margin-right: 5%;
+    font-size: 1em;
+    font-family: 'Roboto Condensed', sans-serif;
+    border-radius: 6px;
+    float: right;
+}
+
+.sub_total{
+    background: #353535;
+    width: 60%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.sub_total label{
+    font-size: 1.7em;
+    float: left;
+    color: white;
+    font-weight: bold;
+    margin-left: 5%;
+}
+
+#subtotal{
+    width: 40%;
+    padding: 5px;
+    margin-right: 5%;
+    font-size: 1em;
+    font-family: 'Roboto Condensed', sans-serif;
+    border-radius: 6px;
+    float: right;
+}
+
+.montos{
+    float: left;
+    width: 100%;
+    border-top: 20px solid #b22828;
+    padding: 20px 60px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    background: #353535;
+}
+
+.montos h1{
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.form_montos{
+    padding-left: 5%;
+}
+.form_montos input{
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: #e9eaed;
+    font-size: 1em;
+    font-family: 'Roboto Condensed', sans-serif;
+    border-radius: 6px;
+    display: block;
+}
+
+.form_montos label{
+    color: #429b66;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.form_montos div{
+    width: 48%;
+    display: inline-block;
+}
+
+.form_montos div:first-child{
+    display: block;
+    width: 48%;
+}
+
+
+
+.form_montos  input[type="submit"]{
+    border-radius: 6px;
+    background: #429b66;
+    color: white;
+    margin-top: 5px;
+    font-size: 1.8em;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-left: 10%;
+    width: 30%;
+    border: none;
+    float: left;
+
+}
+
+#cancelar{
+    background: #da0000;
+}
+
+#cancelar:hover{
+    background: #b22828;
+    cursor:pointer;
+}
+
+.form_montos input[type="submit"]:hover{
+    background: #51c480;
+    cursor:pointer;
+}
+
+footer{
+    float: left;
+    width: 100%;
+    color: black;
+    margin-top: 10px;
+}
+
+footer h4{
+
+    text-align: center;
+}

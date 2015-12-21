@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="Mapeadores.PedidoMapeador">    
+    
+      <resultMap id="resultPedido" type="Entidades.Pedido">
+        <id property="id" column="tb_pedido_id"></id>
+        <result property="fech_hor" column="tb_pedido_fechor"></result>
+        <result property="cliente" column="tb_pedido_cli"></result>
+        <result property="direccion" column="tb_pedido_dir"></result>
+        <result property="telf" column="tb_pedido_telfij"></result>
+        <result property="importe" column="tb_pedido_imp"></result>       
+        <result property="pago" column="tb_pedido_pag"></result>
+        <result property="vuelto" column="tb_pedido_vue"></result>
+        <result property="estado" column="tb_pedido_est"></result>
+        <association property="oCiudad" javaType="Entidades.Ciudad">
+            <result property="nombre" column="tb_ciudad_nom"></result>
+        </association>
+        <collection property="lDetallePedido" ofType="Entidades.DetallePedido">
+            <id property="id" column="tb_detallepedido_id"></id>
+            <result property="cant" column="tb_detallepedido_can"></result>
+            <result property="preUni" column="tb_detallepedido_preuni"></result>
+            <result property="subTotal" column="tb_detallepedido_subtot"></result>
+            <association property="oProducto" javaType="Entidades.Producto">
+                <result property="nombre" column="tb_producto_nom"></result>
+            </association>
+        </collection>        
+    </resultMap>
+    
+    <resultMap id="resultPed" type="Entidades.Pedido">
+        <id property="id" column="tb_pedido_id"></id>
+        <result property="cliente" column="tb_pedido_cli"></result>
+        <result property="direccion" column="tb_pedido_dir"></result>
+        <result property="telf" column="tb_pedido_telfij"></result>
+        <association property="oCiudad" javaType="Entidades.Ciudad">
+            <result property="nombre" column="tb_ciudad_nom"></result>
+        </association>
+    </resultMap>
+    
+    <insert id="registrarPedido" parameterType="Entidades.Pedido">
+        
+        insert into tb_pedido
+        (tb_pedido_fechor,
+        tb_pedido_cli,
+        tb_pedido_dir,
+        tb_pedido_telfij,
+        tb_pedido_imp,
+        tb_pedido_pag,
+        tb_pedido_vue,
+        tb_pedido_est,
+        tb_usuario_id, 
+        tb_ciudad_id)        
+        values(#{fech_hor},
+        #{cliente},
+        #{direccion},
+        #{telf},
+        #{importe},
+        #{pago},
+        #{vuelto},
+        #{estado},
+        #{oUsuario.id},
+        #{oCiudad.id})
+        
+    </insert>
+   
+   
+    
+     <select id="Id" resultType="Integer">
+        select MAX(tb_pedido_id) from tb_pedido
+    </select>   
+    
+   
+
+     <select id="SeleccionarPedido" parameterType="String" resultMap="resultPedido">
+        select
+        tb_pedido.tb_pedido_id,
+        tb_pedido.tb_pedido_fechor,
+        tb_pedido.tb_pedido_cli,
+        tb_pedido.tb_pedido_dir,
+        tb_pedido.tb_pedido_telfij,
+        tb_pedido.tb_pedido_imp,
+        tb_pedido.tb_pedido_pag,
+        tb_pedido.tb_pedido_vue,
+        tb_pedido.tb_pedido_est,
+        tb_detallepedido.tb_detallepedido_id,
+        tb_detallepedido.tb_detallepedido_can,
+        tb_detallepedido.tb_detallepedido_preuni,
+        tb_detallepedido.tb_detallepedido_subtot,
+        tb_producto.tb_producto_nom,
+        tb_ciudad.tb_ciudad_nom             
+        from tb_pedido
+        inner join tb_detallepedido on tb_pedido.tb_pedido_id = tb_detallepedido.tb_pedido_id
+        inner join tb_producto on tb_detallepedido.tb_producto_id = tb_producto.tb_producto_id
+        inner join tb_usuario on tb_pedido.tb_usuario_id = tb_usuario.tb_usuario_id
+        inner join tb_ciudad on tb_pedido.tb_ciudad_id = tb_ciudad.tb_ciudad_id
+         where tb_pedido.tb_pedido_est=#{estado}
+         order by tb_pedido.tb_pedido_fechor asc
+    </select> 
+    
+    <select id="obtenerPorId" parameterType="Integer" resultMap="resultPed">
+        select
+        tb_pedido.tb_pedido_id,
+        tb_pedido.tb_pedido_cli,
+        tb_pedido.tb_pedido_dir,
+        tb_pedido.tb_pedido_telfij,
+        tb_ciudad.tb_ciudad_nom
+        from tb_pedido
+        inner join tb_ciudad on tb_pedido.tb_ciudad_id = tb_ciudad.tb_ciudad_id
+        where tb_pedido.tb_pedido_id=#{Id}
+    </select>    
+  
+    
+    <update id="modificarPedido" parameterType="Entidades.Pedido">
+        update 
+        tb_pedido 
+        set         
+        tb_pedido_cli = #{cliente}, 
+        tb_pedido_dir = #{direccion}, 
+        tb_pedido_imp = #{importe}, 
+        tb_pedido_pag = #{pago}, 
+        tb_pedido_vue = #{vuelto}, 
+        tb_pedido_est = #{estado}, 
+        tb_ciudad_id = #{oCiudad.id}        
+        where tb_pedido_id = #{id}     
+    </update>
+    
+    <update id="updatePorId" parameterType="Integer">
+        update
+        tb_pedido
+        set tb_pedido_est = 'C'
+        where tb_pedido_id = #{id}
+    </update>
+    
+    <update id="anularPorId" parameterType="Integer">
+        update
+        tb_pedido
+        set tb_pedido_est = 'A'
+        where tb_pedido_id = #{id}
+    </update>
+     
+     <update id="despacharPorId" parameterType="Integer">
+        update
+        tb_pedido
+        set tb_pedido_est = 'D'
+        where tb_pedido_id = #{id}
+    </update>
+
+</mapper>

@@ -1,0 +1,176 @@
+body{
+  margin-top: 50px;
+
+}
+
+.contenedor-total{
+  margin: 0;
+  padding: 0;
+}
+
+header{
+
+}
+
+.fila{
+ margin: 0;
+}
+
+.navegacion{
+
+
+}
+
+.imagen{
+
+  width: 100%;
+  padding: 0px;
+}
+
+.titulo{
+  background: #429b66;
+  color: white;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+}
+
+.titulo h3{
+  margin: 10px 0;
+}
+
+
+
+.paso1{
+  border-top: 20px solid #429b66;
+
+}
+
+.formulario-cont{
+
+  padding: 20px 0;
+
+}
+
+.formulario-cont label{
+  color: #353535;
+  font-size: 1.3em;
+}
+
+.form-1 input{
+
+  padding: 10px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-size: 1.3em;
+  background: #e9eaed;
+}
+
+.form-1 select{
+
+
+}
+
+.form-1 h2{
+  color: #353535;
+  font-size: 1.3em;
+  margin: 0;
+}
+
+.form-1 input:focus{
+    border: 2px solid #429b66;
+}
+
+.form-1 input[type="submit"]{
+    border-radius: 6px;
+    background: #429b66;
+    color: white;
+    margin-top: 20px;
+    font-size: 1em;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+
+  }
+
+.form-1 input[type="submit"]:hover{
+      background: #51c480;
+      cursor:pointer;
+  }
+
+
+  footer{
+    background: #353535;
+    color: white;
+
+  }
+
+  footer h4{
+    font-size: 0.9em;
+  }
+
+
+@media only screen and (min-width: 450px){
+  .imagen_principal img{
+    width: 100%;
+  }
+
+  .navegador-izq li:last-child {
+    margin-right: 20px;
+  }
+
+  .titulo h3{
+    font-size: 3em;
+  }
+
+  .formulario-cont{
+    padding: 30px 60px 30px 60px;
+  }
+
+  .formulario-cont label{
+    color: #353535;
+    font-size: 2.3em;
+  }
+
+  .form-1 input{
+
+    padding: 20px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 1.8em;
+    background: #e9eaed;
+  }
+
+  .form-1 select{
+
+
+  }
+
+  .form-1 h2{
+    color: #353535;
+    font-size: 1.3em;
+    margin: 0;
+  }
+
+  .form-1 input[type="submit"]{
+      border-radius: 6px;
+      background: #429b66;
+      color: white;
+      padding-bottom: 40px;
+      font-size: 2em;
+      font-weight: bold;
+      border: none;
+    }
+
+    .form-1 h2{
+      color: #353535;
+      font-size: 2.3em;
+      margin: 0;
+    }
+
+}

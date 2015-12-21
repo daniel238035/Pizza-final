@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="Mapeadores.CiudadMapeador">    
+    <resultMap id="resultCiudad" type="Entidades.Ciudad">
+        <id property="id" column="tb_ciudad_id"></id>
+        <result property="cod" column="tb_ciudad_cod"></result>
+        <result property="nombre" column="tb_ciudad_nom"></result>
+        <result property="prefijo" column="tb_ciudad_pretel"></result>
+    </resultMap>
+    
+    <select id="seleccionGeneral" parameterType="String" resultMap="resultCiudad" >
+        select
+        tb_ciudad_id,
+        tb_ciudad_cod,
+        tb_ciudad_nom,
+        tb_ciudad_pretel
+        from tb_ciudad        
+        where tb_ciudad_nom like #{nombre}
+        order by tb_ciudad_nom asc
+    </select>
+   
+    
+    
+     
+
+</mapper>

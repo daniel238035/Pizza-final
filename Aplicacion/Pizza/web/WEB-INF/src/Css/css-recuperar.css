@@ -1,0 +1,191 @@
+body{
+
+  background: url(../Imagenes/fondo_recuperar.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+
+}
+
+.contenedor{
+
+  font-family: 'Lato', sans-serif;
+
+}
+
+.fila{
+
+  margin: auto;
+   overflow: hidden;
+}
+
+
+.columna-izq{
+  display: none;
+}
+
+p{
+  display: none;
+}
+
+.columna-der{
+
+
+}
+.contenedor-izq{
+  display: none;
+}
+
+.contenedor-der{
+  background: rgba(255,255,255,0.9);
+}
+
+.logo{
+   ;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.logo figure{
+  width: 80%;
+  padding-left: 10%;
+}
+
+.logo img{
+
+}
+
+.seccion-recuperar{
+
+  margin: 20px 0;
+}
+
+.seccion-recuperar h1{
+
+  color: #429b66;
+  font-size: 4em;
+  padding-bottom: 5px;
+}
+
+.formulario input{
+
+  margin: 40px 0;
+  padding: 20px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-size: 1.5em;
+  background: #e9eaed;
+
+}
+
+.contenedor-correo{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.boton-enviar{
+  background: #b22828 !important;
+}
+
+.boton-enviar:hover {
+  background: #da0000 !important;
+}
+
+.boton-login{
+  background: #429b66 !important;
+  font-size: 2em !important;
+  font-weight: bold !important;
+  padding: 10px 0 !important;
+}
+
+.boton-login:hover {
+  background: #51c480 !important;
+
+}
+
+.boton-login a{
+  text-decoration: none !important;
+}
+
+
+
+.formulario input[type="submit"]{
+    border-radius: 6px;
+    background: #429b66;
+    color: white;
+    margin-top: 20px;
+    font-size: 2em;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+
+  }
+
+.formulario input[type="submit"]:hover{
+      background: #51c480;
+      cursor:pointer;
+  }
+
+a{
+    text-decoration: none;
+    color: #DA0000;
+  }
+
+footer{
+
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+
+@media only screen and (min-width: 1024px){
+p{
+  display: block;
+}
+  .columna-izq{
+
+      display: block;
+  }
+
+  .contenedor-izq{
+    display:block;
+    font-size: 2em;
+    transform: translateY(500%);
+  }
+
+  .contenedor-izq .texto1{
+    color: black;
+    background: white;
+
+  }
+  .contenedor-izq .texto2{
+    color: black;
+    background: white;
+
+
+  }
+
+  .contenedor{
+    width: 100%;
+  }
+
+  .fila{
+    bottom: 0;
+    margin: 0px;
+  }
+
+  .columna-der{
+    /**modifique la siguiente linea*/
+    background: rgba(255,255,255,0.9);
+    height: 100vh;
+
+  }
+
+  .contenedor-der{
+
+  }
+
+}

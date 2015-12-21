@@ -1,0 +1,340 @@
+body{
+  margin-top: 50px;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
+
+
+.notificacion{
+        display: none;
+	vertical-align: center;
+	text-align: center;
+	margin-left: 5rem;
+        position: fixed;
+        z-index: 1000000;
+	width: 21rem;
+	border-radius: 13px 13px 13px 13px;
+	border: 2px solid #2A650B;
+	margin-top:10vh;
+	background: #C6E6B5;
+}
+.notificacion p{
+	padding: .5rem;
+	text-align: center;
+	color: #2A650B;
+        size: 10px;
+}
+
+.contenedor-total{
+  margin: 0;
+  padding: 0;
+}
+
+.fila{
+ margin: 0;
+ padding: 0;
+}
+
+.imagen{
+  width: 100%;
+  padding: 0px;
+}
+
+.navegador2{
+  padding: 0;
+
+}
+
+
+.navegacion2_sub{
+  margin: 0;
+}
+
+.navegador2 li a{
+    color: white !important;
+}
+
+.navegador-acciones li a:hover{
+    background: #353535 !important;
+}
+
+.seccion1{
+  background: #353535;
+  border-top: 20px solid #429b66;
+
+}
+
+
+.seccion1 h1{
+  color: white;
+  font-size: 2em;
+}
+
+.seccion1 .formulario-cont span{
+    margin-right: 10px;
+}
+
+.form-1{
+  margin-bottom: 20px;
+}
+
+.form-1 label{
+  color: #429b66;
+  font-size: 1.5em;
+}
+
+.seccion2{
+  background: white;
+  border-top: 20px solid #b22828;
+}
+
+.seccion2 h1{
+  color: #353535;
+  font-size: 2em;
+}
+
+.fila-productos{
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+}
+
+.columna-producto{
+}
+
+.columna-producto {
+
+  padding:10px 0;
+
+}
+
+.foto-producto{
+
+  padding: 0;
+}
+
+.nombre-pizza{
+  background: #da0000;
+  padding: 10px;
+}
+
+.nombre-pizza h2{
+  margin: 0;
+  color: white;
+}
+
+.desc-pizza{
+  background: #e9eaed;
+  padding: 10px 10px;
+  font-size: 1.4em;
+}
+
+.precio-pizza{
+  background: #e9eaed;
+
+}
+
+.precio-pizza h2{
+  padding-top: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.cantidad{
+  background: #429b66;
+  color: white;
+  font-size: 1.4em;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.cantidad input{
+    font-size: 1.3em;
+    padding: 1px;
+}
+
+.subtotal{
+  background: #353535;
+  color: white;
+  font-size: 1.4em;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+}
+
+.subtotal input{
+    font-size: 1.3em;
+    padding: 1px;
+}
+
+.columna-producto .container{
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+}
+
+.seccion3{
+  background: #353535;
+  border-top: 20px solid #429b66;
+}
+
+.seccion3 h1{
+  color: white;
+  font-size: 2em;
+}
+
+.form-3{
+  margin-bottom: 20px;
+}
+
+.form-3 label{
+  color: #429b66;
+  font-size: 1.5em;
+}
+
+
+.boton-ing{
+  background: #429b66;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  padding: 0px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.boton-ing :hover{
+    background: #51c480;
+    cursor:pointer;
+    border: none;
+}
+
+.boton-can{
+  background: #b22828;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  padding: 0px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.boton-can :hover{
+    background: #da0000;
+    cursor:pointer;
+    border: none;
+}
+
+footer{
+  background: #353535;
+  color: white;
+
+}
+
+
+
+
+footer{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1em;
+}
+
+footer h4{
+  display: inline-block;
+
+}
+footer span{
+  color: white;
+  display: inline-block;
+  margin: 0px 5px;
+}
+
+.icon-facebook2:hover{
+  color: #3b5998;
+}
+
+.icon-twitter2:hover {
+  color:  #1dcaff;
+}
+
+.icon-youtube:hover {
+  color: #bb0000
+}
+
+.icon-github3:hover {
+  color: #6E00B2;
+}
+
+
+@media only screen and (min-width: 450px){
+  .imagen_principal img{
+    width: 100%;
+  }
+
+  .navegador-izq li:last-child {
+    margin-right: 20px;
+  }
+
+
+  .navegacion2_sub {
+
+  }
+
+  #navegador2{
+    padding: 0;
+    margin:0px;
+    background:#b22828;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .navegador-acciones{
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .navegador-acciones li{
+    background:#b22828;
+      padding: 0;
+  }
+
+  .navegador-acciones a{
+    color: white !important;
+    font-size: 1.5em !important;
+  }
+
+  .navegador-acciones li:hover {
+    color: white !important;
+    background: #353535 !important;
+  }
+
+
+
+  .columna-producto {
+
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .foto-producto{
+
+    padding: 0;
+  }
+
+  footer{
+    font-size: 1.3em;
+  }
+  footer span{
+    margin: 0px 10px;
+  }
+
+
+}
